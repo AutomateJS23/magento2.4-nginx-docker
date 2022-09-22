@@ -1,0 +1,24 @@
+php bin/magento setup:install \
+        --base-url=http://localhost:8001 \
+        --db-host=db \
+        --db-name=magento2 \
+        --db-user=magento2 \
+        --db-password=Magento2@ \
+        --admin-firstname=Admin \
+        --admin-lastname=Admin \
+        --admin-email=admin@admin.com \
+        --admin-user=admin \
+        --admin-password=admin@123 \
+        --language=en_US \
+        --currency=USD \
+        --timezone=America/Chicago \
+        --use-rewrites=1 \
+        --elasticsearch-host=es01 \
+        --elasticsearch-port=9200
+
+
+# If you want to disable Magento_TwoFactorAuth module
+php bin/magento module:disable Magento_TwoFactorAuth
+
+# download magento
+https://github.com/magento/magento2/archive/refs/tags/2.4.2-p1.zip 
